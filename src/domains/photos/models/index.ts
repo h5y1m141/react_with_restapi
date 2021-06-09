@@ -5,3 +5,19 @@ export type Photo = {
   url: string
   thumbnailUrl: string
 }
+
+export type PhotoState = {
+  photos: Photo[]
+  currentPhoto: Photo
+}
+
+export const initialPhotoState = {
+  photos: [],
+  currentPhoto: {
+    id: '',
+    albumId: '',
+    title: '',
+    url: '',
+    thumbnailUrl: '',
+  },
+}
