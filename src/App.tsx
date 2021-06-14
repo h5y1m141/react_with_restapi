@@ -1,9 +1,8 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import { AlbumProvider } from './providers/AlbumProvider'
+import { AlbumQueryProvider } from './providers/AlbumQueryProvider'
 import { PhotoProvider } from './providers/PhotoProvider'
 import { Albums } from './pages/Albums'
-import { AlbumDetail } from './pages/AlbumDetail'
 import { Photos } from './pages/Photos'
 import { PhotoDetail } from './pages/PhotoDetail'
 import { Box, Container } from '@material-ui/core'
@@ -14,14 +13,14 @@ const App: React.VFC = () => {
       <Box p={1}>
         <Router>
           <Switch>
-            <AlbumProvider>
+            <AlbumQueryProvider>
               <Route exact path="/albums">
                 <Albums />
               </Route>
               <Route path="/albums/:id">
-                <AlbumDetail />
+                <Albums />
               </Route>
-            </AlbumProvider>
+            </AlbumQueryProvider>
           </Switch>
         </Router>
         <Router>
