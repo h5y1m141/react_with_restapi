@@ -13,7 +13,7 @@ export const PhotoProvider: React.FC = ({ children }) => {
     async function fetchData() {
       const initialAblumID = '1'
       const items = await fetchPhotos(initialAblumID)
-      console.log(items)
+
       // NOTE: JavaScriptのスプレッド構文を利用して初期値で何も設定してない一覧情報だけを設定
       if (items.length > 0) {
         setState({

@@ -44,6 +44,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react-query": "^1.2.9",
     "@types/react-router-dom": "^5.1.7",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",

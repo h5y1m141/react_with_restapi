@@ -15,7 +15,9 @@ export const AlbumsTemplate: React.VFC<Props> = ({ albums, handleClick }) => {
       </Typography>
 
       {albums.map((album) => {
-        return <AlbumItem album={album} handleClick={handleClick} />
+        return (
+          <AlbumItem key={album.id} album={album} handleClick={handleClick} />
+        )
       })}
     </>
   )
